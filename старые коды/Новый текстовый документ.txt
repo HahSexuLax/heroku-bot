@@ -1,0 +1,5 @@
+@bot.event
+async def on_ready():
+    guilds = await bot.fetch_guilds(limit = None).flatten()
+    await bot.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.watching, name=f'Yume • -хелп  | Я смотрю за {len(guilds)}, СЕРВЕРАМИ! '))
+    print(f'Если шо меня {len(guilds)} серверов меня юзают!')
